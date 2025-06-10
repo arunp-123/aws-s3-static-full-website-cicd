@@ -13,9 +13,8 @@ pipeline {
         }
         stage('Deploy to S3') {
             steps {
-                sh '''
-                    aws s3 sync . s3://$S3_BUCKET --delete
-                '''
+                sh "aws s3 sync . s3://$S3_BUCKET --delete"
+                
             }
         }
     }
