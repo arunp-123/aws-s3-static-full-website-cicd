@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Code Clone') {
             steps {
-                git url: 'https://github.com/arunp-123/static-full-website-cicd.git', branch: 'master'
+                git url: 'https://github.com/arunp-123/aws-s3-static-full-website-cicd.git', branch: 'master'
             }
         }
         stage('Deploy to S3') {
